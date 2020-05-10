@@ -11,3 +11,5 @@
 1. [技术面试必备基础知识](https://github.com/CyC2018/CS-Notes)
 1. [2019年最新总结](https://github.com/0voice/interview_internal_reference)
 1. [互联网一线大厂面试+学习指南](https://github.com/AobingJava/JavaFamily)
+1. [PHP 详细面试总结](https://learnku.com/articles/25204)
+1. [PHP 详细面试总结](https://learnku.com/articles/28772)
