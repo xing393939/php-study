@@ -1,5 +1,5 @@
 #coding:utf-8
-import socket, logging
+import socket, logging, sys
 import select, errno
 
 logger = logging.getLogger("network-server")
