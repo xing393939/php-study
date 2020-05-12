@@ -4,6 +4,7 @@ import select, errno
 
 logger = logging.getLogger("network-server")
 logger.addHandler(logging.StreamHandler(sys.stdout))
+logger.setLevel(logging.DEBUG)
 
 if __name__ == "__main__":
     try:
