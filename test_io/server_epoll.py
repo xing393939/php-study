@@ -3,6 +3,8 @@ import socket, logging
 import select, errno
 
 logger = logging.getLogger("network-server")
+logger.addHandler(logging.StreamHandler(sys.stdout))
+
 if __name__ == "__main__":
     try:
         # 创建 TCP socket 作为监听 socket
