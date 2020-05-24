@@ -284,7 +284,15 @@
 <ul>
 <li>2.8&#xFF1A;scan&#x6307;&#x4EE4;&#x3001;HyperLogLog</li>
 <li>3.2&#xFF1A;Geo</li>
-<li>4.0&#xFF1A;Redis-Cell&#x3001;&#x5E03;&#x9686;&#x8FC7;&#x6EE4;&#x5668;&#x3001;&#x60F0;&#x6027;&#x5220;&#x9664;(unlink/flushall async)&#x3001;&#x5F02;&#x6B65;&#x5220;&#x9664;&#x70B9;(rename&#x6307;&#x4EE4;&#x3001;key&#x8FC7;&#x671F;&#x3001;LRU&#x6DD8;&#x6C70;)</li>
+<li>4.0&#xFF1A;<ol>
+<li>Redis-Cell</li>
+<li>&#x5E03;&#x9686;&#x8FC7;&#x6EE4;&#x5668;</li>
+<li>AOF sync&#x5230;&#x786C;&#x76D8;</li>
+<li>&#x60F0;&#x6027;&#x5220;&#x9664;(unlink/flushall async)</li>
+<li>&#x5F02;&#x6B65;&#x5220;&#x9664;&#x70B9;(rename&#x6307;&#x4EE4;&#x3001;key&#x8FC7;&#x671F;&#x3001;LRU&#x6DD8;&#x6C70;)</li>
+<li>&#x6DF7;&#x5408;&#x6301;&#x4E45;&#x5316;</li>
+</ol>
+</li>
 </ul>
 <h4 id="redis-&#x6570;&#x636E;&#x7ED3;&#x6784;">redis &#x6570;&#x636E;&#x7ED3;&#x6784;</h4>
 <ol>
@@ -332,9 +340,23 @@
 </ol>
 </li>
 </ol>
-<h4 id="rdb-&#x548C;-aof-&#x8FC7;&#x7A0B;&#xFF1F;rdb-&#x4E3A;&#x4EC0;&#x4E48;&#x53EF;&#x4EE5;&#x7528;&#x521B;&#x5EFA;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#xFF1F;&#xFF08;&#x8FD9;&#x91CC;&#x8003;&#x5BDF;&#x4E00;&#x4E2A;-cow&#xFF09;&#x8FD9;&#x4E24;&#x79CD;&#x6301;&#x4E45;&#x5316;&#x65B9;&#x5F0F;&#x4F1A;&#x4E22;&#x6570;&#x636E;&#x5417;&#xFF1F;">rdb &#x548C; aof &#x8FC7;&#x7A0B;&#xFF1F;rdb &#x4E3A;&#x4EC0;&#x4E48;&#x53EF;&#x4EE5;&#x7528;&#x521B;&#x5EFA;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#xFF1F;&#xFF08;&#x8FD9;&#x91CC;&#x8003;&#x5BDF;&#x4E00;&#x4E2A; cow&#xFF09;&#x8FD9;&#x4E24;&#x79CD;&#x6301;&#x4E45;&#x5316;&#x65B9;&#x5F0F;&#x4F1A;&#x4E22;&#x6570;&#x636E;&#x5417;&#xFF1F;</h4>
+<h4 id="rdb-&#x548C;-aof-&#x8FC7;&#x7A0B;">rdb &#x548C; aof &#x8FC7;&#x7A0B;</h4>
 <ol>
 <li><a href="https://www.cnblogs.com/itdragon/p/7906481.html" target="_blank">https://www.cnblogs.com/itdragon/p/7906481.html</a></li>
+<li>rdb&#x662F;&#x5B9A;&#x65F6;&#x5907;&#x4EFD;&#x5FEB;&#x7167;&#x5230;dump.rdb&#xFF0C;&#x4EE5;&#x5B50;&#x8FDB;&#x7A0B;&#x7684;cow&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;save 900 1&#x8868;&#x793A;900&#x79D2;&#x5185;&#x6709;1&#x4E2A;key&#x66F4;&#x65B0;&#x5C31;&#x89E6;&#x53D1;&#x3002;</li>
+<li>aof&#x662F;&#x5148;&#x5B9E;&#x65F6;&#x8BB0;&#x5F55;&#x5230;aof_buf(&#x5185;&#x5B58;)&#xFF0C;&#x5199;&#x5230;&#x78C1;&#x76D8;&#x7684;appendonly.aof&#x53D6;&#x51B3;&#x4E8E;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;<ol>
+<li>appendfsync everysec&#xFF0C;&#x5B9A;&#x65F6;&#x4E00;&#x79D2;&#x5199;&#x5165;AOF&#x6587;&#x4EF6;&#xFF0C;(4.0&#x540E;&#x5355;&#x72EC;&#x7EBF;&#x7A0B;&#x5904;&#x7406;)</li>
+<li>appendfsync always&#xFF0C;&#x5B9E;&#x65F6;&#x5199;&#x5165;AOF&#x6587;&#x4EF6;</li>
+<li>appendfsync no&#xFF0C;&#x540C;&#x6B65;&#x65F6;&#x95F4;&#x4E0D;&#x786E;&#x5B9A;</li>
+</ol>
+</li>
+<li>aof&#x91CD;&#x5199;&#xFF1A;&#x4E5F;&#x662F;&#x5B9A;&#x65F6;<ol>
+<li>&#x4EE5;&#x5B50;&#x8FDB;&#x7A0B;&#x91CD;&#x65B0;&#x751F;&#x6210;&#x6574;&#x4E2A;aof&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x538B;&#x7F29;</li>
+<li>&#x540C;&#x65F6;&#x5199;aof_buf&#x548C;aof_rewrite_buf</li>
+<li>&#x751F;&#x6210;&#x5B8C;aof&#x6587;&#x4EF6;&#x540E;&#x8FFD;&#x52A0;aof_rewrite_buf&#xFF0C;&#x5E76;&#x66FF;&#x6362;&#x8001;&#x7684;aof&#x6587;&#x4EF6;</li>
+</ol>
+</li>
+<li>4.0&#x540E;&#x6DF7;&#x5408;&#x6301;&#x4E45;&#x5316;&#xFF0C;&#x5148;rdb&#x6062;&#x590D;&#xFF0C;&#x518D;aof&#x6062;&#x590D;</li>
 </ol>
 <h4 id="redis-&#x4E3A;&#x4EC0;&#x4E48;&#x5FEB;&#xFF1F;&#xFF08;&#x4E3B;&#x8981;&#x8003;&#x5BDF;&#x4E00;&#x4E2A;-io-&#x591A;&#x8DEF;&#x590D;&#x7528;&#x548C;&#x5355;&#x7EBF;&#x7A0B;&#x4E0D;&#x52A0;&#x9501;&#xFF09;">redis &#x4E3A;&#x4EC0;&#x4E48;&#x5FEB;&#xFF1F;&#xFF08;&#x4E3B;&#x8981;&#x8003;&#x5BDF;&#x4E00;&#x4E2A; IO &#x591A;&#x8DEF;&#x590D;&#x7528;&#x548C;&#x5355;&#x7EBF;&#x7A0B;&#x4E0D;&#x52A0;&#x9501;&#xFF09;</h4>
 <ol>
@@ -399,7 +421,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.Redis 缓存","level":"1.4","depth":1,"next":{"title":"4.Linux 服务器","level":"1.5","depth":1,"path":"docs/4.md","ref":"docs/4.md","articles":[]},"previous":{"title":"2.MySql 数据库","level":"1.3","depth":1,"path":"docs/2.md","ref":"docs/2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/3.md","mtime":"2020-05-24T04:50:54.234Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-24T04:51:17.151Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.Redis 缓存","level":"1.4","depth":1,"next":{"title":"4.Linux 服务器","level":"1.5","depth":1,"path":"docs/4.md","ref":"docs/4.md","articles":[]},"previous":{"title":"2.MySql 数据库","level":"1.3","depth":1,"path":"docs/2.md","ref":"docs/2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/3.md","mtime":"2020-05-24T09:06:18.553Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-24T09:06:44.586Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
