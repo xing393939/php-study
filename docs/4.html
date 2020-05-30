@@ -316,11 +316,6 @@
 <li>SIGSTOP&#xFF1A;&#x505C;&#x6B62;&#x8FDB;&#x7A0B;&#x7684;&#x6267;&#x884C;</li>
 <li>SIGCONT&#xFF1A;&#x6062;&#x590D;&#x8FDB;&#x7A0B;&#x7684;&#x6267;&#x884C;</li>
 </ul>
-<h4 id="&#x67E5;&#x770B;&#x8FDB;&#x7A0B;&#x6253;&#x5F00;&#x4E86;&#x54EA;&#x4E9B;&#x6587;&#x4EF6;">&#x67E5;&#x770B;&#x8FDB;&#x7A0B;&#x6253;&#x5F00;&#x4E86;&#x54EA;&#x4E9B;&#x6587;&#x4EF6;</h4>
-<ul>
-<li>lsof | grep mysql &#x67E5;&#x770B;mysql&#x8FDB;&#x7A0B;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;</li>
-<li>lsof -i:3306 &#x67E5;&#x770B;3306&#x7AEF;&#x53E3;&#x88AB;&#x8C01;&#x5360;&#x7528;</li>
-</ul>
 <h4 id="&#x4EC0;&#x4E48;&#x662F;&#x8FDB;&#x7A0B;&#x3001;&#x7EBF;&#x7A0B;&#x3001;&#x534F;&#x7A0B;">&#x4EC0;&#x4E48;&#x662F;&#x8FDB;&#x7A0B;&#x3001;&#x7EBF;&#x7A0B;&#x3001;&#x534F;&#x7A0B;</h4>
 <ol>
 <li><a href="https://github.com/colinlet/PHP-Interview-QA/blob/master/docs/07.Linux/QA.md" target="_blank">&#x8FDB;&#x7A0B;&#x7EBF;&#x7A0B;&#x534F;&#x7A0B;&#x533A;&#x522B;</a></li>
@@ -358,7 +353,9 @@
 <li>iostat -dx 5&#xFF1A;&#x78C1;&#x76D8;&#x7684;&#x8BFB;&#x5199;&#x901F;&#x5EA6;</li>
 <li>sar -n DEV&#xFF1A;&#x67E5;&#x770B;&#x7F51;&#x5361;&#x6D41;&#x91CF;</li>
 <li>lsof -i:3306&#xFF1A;&#x67E5;&#x770B;&#x7AEF;&#x53E3;&#x8FDB;&#x7A0B;</li>
+<li>lsof | grep mysql &#x67E5;&#x770B;mysql&#x8FDB;&#x7A0B;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;</li>
 <li>strace -T -p <pid>&#xFF1A;&#x67E5;&#x770B;&#x8FDB;&#x7A0B;&#x7684;trace&#x548C;&#x8017;&#x65F6;</pid></li>
+<li>tcpdump -i eth0 port 3306 and host 10.146.56.180 -w tcpdump.log&#xFF1A;linux&#x6293;&#x5305;</li>
 </ul>
 <h4 id="inode-&#x662F;&#x4EC0;&#x4E48;">inode &#x662F;&#x4EC0;&#x4E48;</h4>
 <p>&#x6BCF;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x90FD;&#x6709;&#x5BF9;&#x5E94;&#x7684; inode&#xFF0C;&#x9664;&#x4E86;&#x6587;&#x4EF6;&#x540D;&#x4EE5;&#x5916;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x4FE1;&#x606F;&#xFF0C;&#x90FD;&#x5B58;&#x5728;inode&#x4E4B;&#x4E2D;</p>
@@ -416,7 +413,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.Linux 服务器","level":"1.5","depth":1,"next":{"title":"5.Web 安全","level":"1.6","depth":1,"path":"docs/5.md","ref":"docs/5.md","articles":[]},"previous":{"title":"3.Redis 缓存","level":"1.4","depth":1,"path":"docs/3.md","ref":"docs/3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/4.md","mtime":"2020-05-30T02:59:30.632Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-30T02:59:56.327Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.Linux 服务器","level":"1.5","depth":1,"next":{"title":"5.Web 安全","level":"1.6","depth":1,"path":"docs/5.md","ref":"docs/5.md","articles":[]},"previous":{"title":"3.Redis 缓存","level":"1.4","depth":1,"path":"docs/3.md","ref":"docs/3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/4.md","mtime":"2020-05-30T06:37:05.816Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-30T06:37:30.824Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
