@@ -1,6 +1,6 @@
 ### PHP 面试知识点
 
-参考的面试资料：
+#### 参考的面试资料：
 1. [分享一下最近的面试题，都是大厂](https://learnku.com/articles/41140)
 1. [PHP面试问答](https://github.com/colinlet/PHP-Interview-QA)
 1. [PHP面试总结](https://github.com/chunlintang/interview)
@@ -13,3 +13,6 @@
 1. [PHP 详细面试总结](https://learnku.com/articles/25204)
 1. [PHP 详细面试总结](https://learnku.com/articles/28772)
 1. [如何优雅的面试](https://www.yoytang.com/3-year-backend-interview-experience.html)
+
+#### 书籍
+1. [PHP7内核剖析](https://book.douban.com/subject/27197032/)
