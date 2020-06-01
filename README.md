@@ -12,3 +12,4 @@
 1. [互联网一线大厂面试+学习指南](https://github.com/AobingJava/JavaFamily)
 1. [PHP 详细面试总结](https://learnku.com/articles/25204)
 1. [PHP 详细面试总结](https://learnku.com/articles/28772)
+1. [如何优雅的面试](https://www.yoytang.com/3-year-backend-interview-experience.html)
