@@ -21,3 +21,5 @@
 
 #### 书籍
 1. [PHP7内核剖析](https://book.douban.com/subject/27197032/)
+1. [TCP/IP详解 卷1](https://book.douban.com/subject/26825411/)
+1. [深入理解计算机系统](https://book.douban.com/subject/26912767/)
