@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>10.Laravel 框架 · GitBook</title>
+        <title>10.Elasticsearch · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -224,7 +224,7 @@
                 <a href="10.html">
             
                     
-                    10.Laravel 框架
+                    10.Elasticsearch
             
                 </a>
             
@@ -262,7 +262,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >10.Laravel 框架</a>
+        <a href=".." >10.Elasticsearch</a>
     </h1>
 </div>
 
@@ -277,7 +277,53 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="laravel-&#x6846;&#x67B6;">Laravel &#x6846;&#x67B6;</h3>
+                                <h3 id="elasticsearch">Elasticsearch</h3>
+<h4 id="&#x57FA;&#x7840;">&#x57FA;&#x7840;</h4>
+<ol>
+<li>&#x5206;&#x7247;-&#x4E3B;&#x5206;&#x7247;&#xFF0C;&#x53EF;&#x8BFB;&#x53EF;&#x5199;&#xFF0C;&#x6570;&#x91CF;&#x786E;&#x5B9A;&#x540E;&#x5C31;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;&#xFF0C;&#x9664;&#x975E;reindex</li>
+<li>&#x5206;&#x7247;-&#x526F;&#x672C;&#x5206;&#x7247;&#xFF0C;&#x53EA;&#x53EF;&#x8BFB;&#xFF0C;&#x6570;&#x91CF;&#x53EF;&#x4EE5;&#x540E;&#x671F;&#x4FEE;&#x6539;</li>
+<li>&#x8282;&#x70B9;&#x7C7B;&#x578B;&#xFF1A;<ol>
+<li>Master.eligible Node&#xFF0C;&#x53EF;&#x4EE5;&#x6210;&#x4E3A;master</li>
+<li>Data Node&#xFF0C;&#x6570;&#x636E;&#x8282;&#x70B9;</li>
+<li>Coordinating Node&#xFF0C;&#x534F;&#x8C03;&#x8282;&#x70B9;&#xFF0C;&#x8D1F;&#x8D23;&#x8DEF;&#x7531;&#x8F6C;&#x53D1;&#x548C;&#x6C47;&#x603B;&#x8282;&#x70B9;&#x7684;&#x67E5;&#x8BE2;</li>
+</ol>
+</li>
+<li>&#x7D22;&#x5F15;&#x7684;index&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7684;table</li>
+<li>&#x7D22;&#x5F15;&#x7684;mapping&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x8868;&#x7684;schema&#xFF0C;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#x7684;&#x7C7B;&#x578B;</li>
+<li>&#x7D22;&#x5F15;&#x7684;setting&#xFF0C;&#x5B9A;&#x4E49;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x5206;&#x5E03;</li>
+</ol>
+<h4 id="cluster">_cluster</h4>
+<ul>
+<li>&#x8282;&#x70B9;&#x7684;&#x72B6;&#x6001;&#xFF1A;GET /_cluster/health?level=nodes</li>
+<li>&#x7D22;&#x5F15;&#x7684;&#x72B6;&#x6001;&#xFF1A;GET /_cluster/health?level=indices</li>
+</ul>
+<h4 id="cat-&#x547D;&#x4EE4;">_cat &#x547D;&#x4EE4;</h4>
+<ol>
+<li>/_cat/health &#x67E5;&#x770B;&#x96C6;&#x7FA4;&#x6574;&#x4F53;&#x72B6;&#x6001;</li>
+<li>/_cat/nodes?v&amp;s=ip:desc &#x67E5;&#x770B;&#x8282;&#x70B9;(&#x8D1F;&#x8F7D;&#x4FE1;&#x606F;)</li>
+<li>/_cat/nodes?v&amp;h=name,diskUsed,diskTotal &#x67E5;&#x770B;&#x78C1;&#x76D8;&#x4F7F;&#x7528;</li>
+<li>/_cat/allocation &#x67E5;&#x770B;&#x78C1;&#x76D8;&#x4F7F;&#x7528;</li>
+<li>/_cat/shards &#x67E5;&#x770B;node&#x4E0B;&#x7684;shard&#x5206;&#x5E03;</li>
+<li>/_cat/indices &#x67E5;&#x6240;&#x6709;&#x7D22;&#x5F15;</li>
+<li>/_cat/segments/* &#x67E5;&#x770B;index&#x5185;&#x5B58;&#x5360;&#x7528;</li>
+<li>/_cat/plugins &#x67E5;&#x770B;&#x6269;&#x5C55;</li>
+<li>/_cat/count &#x67E5;&#x770B;&#x6587;&#x6863;&#x603B;&#x6570;</li>
+</ol>
+<h4 id="&#x76D1;&#x63A7;">&#x76D1;&#x63A7;</h4>
+<ol>
+<li>&#x96C6;&#x7FA4;&#x7EA7;&#x522B;&#xFF1A;GET /_cluster/health</li>
+<li>&#x8282;&#x70B9;&#x7EA7;&#x522B;&#xFF1A;GET /_nodes/stats&#xFF0C;&#x5982;&#x679C;nodes.&#x8282;&#x70B9;.fielddata_breaker.tripped&#x503C;&#x5F88;&#x5927;&#x6216;&#x8005;&#x4E00;&#x76F4;&#x589E;&#xFF0C;&#x8BF4;&#x660E;&#x5185;&#x5B58;&#x4E0D;&#x591F;&#x7ECF;&#x5E38;OOM</li>
+<li>&#x7D22;&#x5F15;&#x7EA7;&#x522B;&#xFF1A;GET /{index_name}/_stats&#xFF0C;index_name &#x53EF;&#x4EE5;&#x6539;&#x6210; _all</li>
+</ol>
+<h4 id="&#x5176;&#x4ED6;">&#x5176;&#x4ED6;</h4>
+<ol>
+<li>&#x67E5;&#x770B;&#x6A21;&#x677F;&#xFF1A;GET /_template</li>
+<li>&#x67E5;&#x770B;&#x8BBE;&#x7F6E;&#x9879;&#xFF1A;GET /_all/_settings</li>
+<li>&#x6E05;&#x7406;&#x7F13;&#x5B58;&#xFF1A;POST /_cache/clear</li>
+<li>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7684;task&#xFF1A;GET /_tasks</li>
+<li>&#x67E5;&#x7D22;&#x5F15;&#x7684;type&#x548C;mapping&#xFF1A;GET /_mapping</li>
+<li>&#x67E5;mapping&#x7684;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#xFF1A;GET ngx-access-mobotoolpush-2018.04.12/_mapping/doc</li>
+</ol>
 
                                 
                                 </section>
@@ -317,7 +363,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"10.Laravel 框架","level":"1.11","depth":1,"previous":{"title":"9.架构","level":"1.10","depth":1,"path":"docs/9.md","ref":"docs/9.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/10.md","mtime":"2020-06-08T13:04:12.104Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-08T13:04:43.213Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"10.Elasticsearch","level":"1.11","depth":1,"previous":{"title":"9.架构","level":"1.10","depth":1,"path":"docs/9.md","ref":"docs/9.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/10.md","mtime":"2020-06-09T10:13:54.262Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-09T10:14:20.113Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
