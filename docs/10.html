@@ -280,24 +280,21 @@
                                 <h3 id="elasticsearch">Elasticsearch</h3>
 <h4 id="&#x57FA;&#x7840;">&#x57FA;&#x7840;</h4>
 <ol>
-<li>&#x4E0D;&#x9002;&#x5408;&#x4F5C;&#x4E3A;&#x4E3B;&#x5B58;&#x50A8;&#xFF1A;&#x6CA1;&#x6709;&#x4E8B;&#x52A1;&#xFF0C;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x6570;&#x636E;&#x4E22;&#x5931;&#x548C;&#x6C61;&#x67D3;&#x3001;&#x8FD1;&#x5B9E;&#x65F6;&#x3001;&#x5403;&#x5185;&#x5B58;&#x3001;mapping&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</li>
+<li><a href="https://www.ershicimi.com/p/bb310761ab0cf04d14eb144abb52adaf" target="_blank">Elasticsearch &#x67B6;&#x6784;&#x89E3;&#x6790;&#x4E0E;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;</a></li>
+<li>&#x4E0D;&#x9002;&#x5408;&#x4F5C;&#x4E3A;&#x4E3B;&#x5B58;&#x50A8;&#xFF1A;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x6570;&#x636E;&#x4E22;&#x5931;&#x548C;&#x6C61;&#x67D3;&#x3001;&#x65E0;&#x4E8B;&#x52A1;&#x3001;&#x8FD1;&#x5B9E;&#x65F6;&#x3001;&#x5403;&#x5185;&#x5B58;&#x3001;mapping&#x4E0D;&#x80FD;&#x4FEE;&#x6539;</li>
 <li>&#x5206;&#x7247;-&#x4E3B;&#x5206;&#x7247;&#xFF0C;&#x53EF;&#x8BFB;&#x53EF;&#x5199;&#xFF0C;&#x6570;&#x91CF;&#x786E;&#x5B9A;&#x540E;&#x5C31;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;&#xFF0C;&#x9664;&#x975E;reindex</li>
 <li>&#x5206;&#x7247;-&#x526F;&#x672C;&#x5206;&#x7247;&#xFF0C;&#x53EA;&#x53EF;&#x8BFB;&#xFF0C;&#x6570;&#x91CF;&#x53EF;&#x4EE5;&#x540E;&#x671F;&#x4FEE;&#x6539;</li>
 <li>&#x8282;&#x70B9;&#x7C7B;&#x578B;&#xFF1A;<ol>
 <li>Master Eligible Node&#xFF0C;&#x5019;&#x9009;&#x4E3B;&#x8282;&#x70B9;</li>
 <li>Data Node&#xFF0C;&#x6570;&#x636E;&#x8282;&#x70B9;</li>
-<li>Coordinating Node&#xFF0C;&#x8DEF;&#x7531;&#x8282;&#x70B9;&#xFF0C;&#x8D1F;&#x8D23;&#x8DEF;&#x7531;&#x8F6C;&#x53D1;&#x548C;&#x67E5;&#x8BE2;&#x6C47;&#x603B;</li>
+<li>Coordinating Node&#xFF0C;&#x534F;&#x8C03;&#x8282;&#x70B9;&#xFF0C;&#x8D1F;&#x8D23;&#x8DEF;&#x7531;&#x8F6C;&#x53D1;&#x548C;&#x67E5;&#x8BE2;&#x6C47;&#x603B;</li>
 </ol>
 </li>
 <li>&#x7D22;&#x5F15;&#x7684;index&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x7684;table</li>
 <li>&#x7D22;&#x5F15;&#x7684;mapping&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x8868;&#x7684;schema&#xFF0C;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#x7684;&#x7C7B;&#x578B;</li>
 <li>&#x7D22;&#x5F15;&#x7684;setting&#xFF0C;&#x5B9A;&#x4E49;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x5206;&#x5E03;</li>
+<li>&#x7D22;&#x5F15;&#x7684;routing&#xFF0C;&#x8DEF;&#x7531;&#x952E;&#x5B57;&#x6BB5;&#xFF0C;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x503C;</li>
 </ol>
-<h4 id="cluster-&#x547D;&#x4EE4;">_cluster &#x547D;&#x4EE4;</h4>
-<ul>
-<li>&#x8282;&#x70B9;&#x7684;&#x72B6;&#x6001;&#xFF1A;GET /_cluster/health?level=nodes</li>
-<li>&#x7D22;&#x5F15;&#x7684;&#x72B6;&#x6001;&#xFF1A;GET /_cluster/health?level=indices</li>
-</ul>
 <h4 id="cat-&#x547D;&#x4EE4;">_cat &#x547D;&#x4EE4;</h4>
 <ol>
 <li>/_cat/health &#x67E5;&#x770B;&#x96C6;&#x7FA4;&#x6574;&#x4F53;&#x72B6;&#x6001;</li>
@@ -312,7 +309,7 @@
 </ol>
 <h4 id="&#x76D1;&#x63A7;">&#x76D1;&#x63A7;</h4>
 <ol>
-<li>&#x96C6;&#x7FA4;&#x7EA7;&#x522B;&#xFF1A;GET /_cluster/health</li>
+<li>&#x96C6;&#x7FA4;&#x7EA7;&#x522B;&#xFF1A;GET /_cluster/health?level=nodes&#xFF0C;&#x5176;&#x4E2D;level&#x8FD8;&#x53EF;&#x4EE5;&#x662F;indices</li>
 <li>&#x8282;&#x70B9;&#x7EA7;&#x522B;&#xFF1A;GET /_nodes/stats&#xFF0C;&#x5982;&#x679C;nodes.&#x8282;&#x70B9;.fielddata_breaker.tripped&#x503C;&#x5F88;&#x5927;&#x6216;&#x8005;&#x4E00;&#x76F4;&#x589E;&#xFF0C;&#x8BF4;&#x660E;&#x5185;&#x5B58;&#x4E0D;&#x591F;&#x7ECF;&#x5E38;OOM</li>
 <li>&#x7D22;&#x5F15;&#x7EA7;&#x522B;&#xFF1A;GET /{index_name}/_stats&#xFF0C;index_name &#x53EF;&#x4EE5;&#x6539;&#x6210; _all</li>
 </ol>
@@ -364,7 +361,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"10.Elasticsearch","level":"1.11","depth":1,"previous":{"title":"9.架构","level":"1.10","depth":1,"path":"docs/9.md","ref":"docs/9.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/10.md","mtime":"2020-06-10T04:51:17.790Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-10T04:51:48.445Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"10.Elasticsearch","level":"1.11","depth":1,"previous":{"title":"9.架构","level":"1.10","depth":1,"path":"docs/9.md","ref":"docs/9.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/10.md","mtime":"2020-06-11T06:22:04.054Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-11T06:22:35.295Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
