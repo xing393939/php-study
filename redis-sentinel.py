@@ -1,3 +1,4 @@
+# https://www.throwable.club/2019/10/07/redis-server-sentinel-install-guide/
 import pprint
 from redis.sentinel import Sentinel
 sentinel = Sentinel([('127.0.0.1', '26379')])
