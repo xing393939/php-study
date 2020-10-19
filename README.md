@@ -13,13 +13,13 @@
 1. [PHP 详细面试总结1](https://learnku.com/articles/25204)
 1. [PHP 详细面试总结2](https://learnku.com/articles/28772)
 1. [如何优雅的面试](https://www.yoytang.com/3-year-backend-interview-experience.html)
-
 1. [后端架构师技术图谱](https://github.com/xingshaocheng/architect-awesome)
 
 #### PHP 的思考
 1. [phper：敢问路在何方](https://www.cnblogs.com/linvanda/p/12807047.html)
 1. [再谈 PHP 未来之路](https://www.cnblogs.com/linvanda/p/12827154.html)
 1. [关于PHP程序员技术职业生涯规划](http://rango.swoole.com/archives/570)
+1. [PHPConChina 2019 PPT和视频](https://github.com/ThinkDevelopers/PHPConChina/tree/master/PHPCON2019)
 
 #### 书籍
 1. [PHP7内核剖析](https://book.douban.com/subject/27197032/)
