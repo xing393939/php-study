@@ -19,7 +19,11 @@
 1. [phper：敢问路在何方](https://www.cnblogs.com/linvanda/p/12807047.html)
 1. [再谈 PHP 未来之路](https://www.cnblogs.com/linvanda/p/12827154.html)
 1. [关于PHP程序员技术职业生涯规划](http://rango.swoole.com/archives/570)
-1. [PHPConChina 2019 PPT和视频](https://github.com/ThinkDevelopers/PHPConChina/tree/master/PHPCON2019)
+1. [PHPConChina 的PPT和视频](https://github.com/ThinkDevelopers/PHPConChina)，举办方是phpconchina.com，举办到2020年
+1. [PHP 全球开发者大会](https://github.com/devlinkcn/)，举办方是devlink.cn，举办到2017年就停了
+1. [LaravelConf Taiwan](https://www.youtube.com/c/LaravelConfTaiwan/playlists)，举办方是台湾的laravelconf.tw，举办到2020年
+1. [Laracon EU 视频](https://www.youtube.com/c/LaraconEU/playlists)，主要是欧盟地区，举办到2020年
+1. [Laracon Online 视频](https://laracon.net/)，Laravel官方举办，国际大V直播
 
 #### 书籍
 1. [PHP7内核剖析](https://book.douban.com/subject/27197032/)
