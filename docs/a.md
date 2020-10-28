@@ -16,7 +16,10 @@
 1. BSD IPC：socket(stream)
 1. POSIX IPC：posix 支持消息队列、信号量、共享内存
 1. pcntl 扩展：提供进程相关操作函数
-1. shmop 扩展：，基于System V IPC接口，共享内存操作扩展。与sysvshm的区别在于是比特级别的控制，内存使用率比sysvshm高，属于高手进阶方式
+1. shmop 扩展：
+  * 共享内存操作扩展，基于System V IPC接口。
+  * 与sysvshm的区别在于是比特级别的控制，内存使用率比sysvshm高，属于高手进阶方式
+  * [php 内存共享shmop源码阅读](https://www.jianshu.com/p/d9b1bb688e05)
 
 
 
