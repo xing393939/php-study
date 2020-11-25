@@ -10,6 +10,7 @@
   * /etc/init/*.conf 定義了哪些服務應該在何级别需要被執行
   * 它用于 Ubuntu 9.10 到 14.10 版本和基于 RHEL 6 的系统中，之后的被 systemd 取代了。
 1. Systemd：配置文件主要放在 /usr/lib/systemd/system 目录，也可能在 /etc/systemd/system 目录
+  * [开机自启脚本（systemd）](https://gnu-linux.readthedocs.io/zh/latest/Chapter02/systemdScript.html)
   * 支持并行化任务；
   * 同时采用 socket 式与 D-Bus 总线式激活服务；
   * 按需启动守护进程（daemon）；
@@ -23,7 +24,7 @@
 |使某服务自动启动	   |chkconfig –level 3 sshd on | 	|systemctl enable sshd.service |
 |使某服务不自动启动  |chkconfig –level 3 sshd off|	|systemctl disable sshd.service|
 |检查服务状态	   |service sshd status	     |     |systemctl status sshd.service |
-|显示所有已启动的服务|chkconfig –list	        |initctl list |systemctl list-units –type=service|
+|显示所有已启动的服务|chkconfig –list	        |initctl list |systemctl list-units --type=service|
 |启动某服务	       |service sshd start	    |start sshd   |systemctl start sshd.service      |
 |停止某服务	       |service sshd stop	    |stop sshd    |systemctl stop sshd.service       |
 |重启某服务	       |service sshd restart	|restart sshd |systemctl restart sshd.service    |
