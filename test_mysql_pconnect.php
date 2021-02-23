@@ -1,26 +1,26 @@
 <?php
-//»ñÈ¡phpµÄ½ø³Ìid
+//è·å–phpçš„è¿›ç¨‹id
 echo "process id: " . posix_getpid();
 
-//Ö÷»úÃûÇ°Ãæ¼ÓÉÏp:±íÊ¾³¤Á¬½Ó
+//ä¸»æœºåå‰é¢åŠ ä¸Šp:è¡¨ç¤ºé•¿è¿æ¥
 $conn = new mysqli("p:localhost", "root", "Root!!2018", "db_wuhan_new");
 if (mysqli_connect_errno()) {
     echo "<br/>mysql error: " . mysqli_connect_errno() . mysqli_connect_error();
     die();
 }
 
-// »ñÈ¡Á¬½ÓÏß³Ìid£¬È»ºóÔÚmysqlÖĞÖ´ĞĞshow processlist;×ö¶Ô±È
-// »ñÈ¡mysqlµÄÁ¬½ÓÏß³Ìid·½·¨1
+// è·å–è¿æ¥çº¿ç¨‹idï¼Œç„¶ååœ¨mysqlä¸­æ‰§è¡Œshow processlist;åšå¯¹æ¯”
+// è·å–mysqlçš„è¿æ¥çº¿ç¨‹idæ–¹æ³•1
 echo "<br>mysqli_thread_id: " . mysqli_thread_id($conn);
 
-// »ñÈ¡mysqlµÄÁ¬½ÓÏß³Ìid·½·¨2
+// è·å–mysqlçš„è¿æ¥çº¿ç¨‹idæ–¹æ³•2
 $sql = "SELECT CONNECTION_ID()";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 print_r("<br/>");
 print_r($row);
 
-// »ñÈ¡wait_timeoutºÍinteractive_timeout
+// è·å–wait_timeoutå’Œinteractive_timeout
 $sql = 'show variables like "%_timeout"';
 $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
