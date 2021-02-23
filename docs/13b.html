@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>a.往一张数据量比较大的表中添加字段 · GitBook</title>
+        <title>a.单点登录 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="13b.html" />
     
+    <link rel="prev" href="13a.html" />
     
 
     </head>
@@ -304,7 +304,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.14.1" data-path="13a.html">
+        <li class="chapter " data-level="1.14.1" data-path="13a.html">
             
                 <a href="13a.html">
             
@@ -317,7 +317,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14.2" data-path="13b.html">
+        <li class="chapter active" data-level="1.14.2" data-path="13b.html">
             
                 <a href="13b.html">
             
@@ -365,7 +365,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >a.往一张数据量比较大的表中添加字段</a>
+        <a href=".." >a.单点登录</a>
     </h1>
 </div>
 
@@ -380,41 +380,28 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="&#x5F80;&#x4E00;&#x5F20;&#x6570;&#x636E;&#x91CF;&#x6BD4;&#x8F83;&#x5927;&#x7684;&#x8868;&#x4E2D;&#x6DFB;&#x52A0;&#x5B57;&#x6BB5;">&#x5F80;&#x4E00;&#x5F20;&#x6570;&#x636E;&#x91CF;&#x6BD4;&#x8F83;&#x5927;&#x7684;&#x8868;&#x4E2D;&#x6DFB;&#x52A0;&#x5B57;&#x6BB5;</h3>
+                                <h3 id="&#x5355;&#x70B9;&#x767B;&#x5F55;">&#x5355;&#x70B9;&#x767B;&#x5F55;</h3>
 <h4 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h4>
 <ul>
-<li><a href="https://segmentfault.com/a/1190000024481446" target="_blank">Online DDL &#x5DE5;&#x5177; pt-osc</a></li>
-<li><a href="https://www.cnblogs.com/gaogao67/p/11165070.html" target="_blank">MySQL Percona Toolkit--pt-osc&#x5B66;&#x4E60;</a></li>
+<li><a href="https://developer.aliyun.com/article/636281" target="_blank">&#x5355;&#x70B9;&#x767B;&#x5F55;&#xFF08;SSO&#xFF09;&#x770B;&#x8FD9;&#x4E00;&#x7BC7;&#x5C31;&#x591F;&#x4E86;</a></li>
+<li><a href="https://youngzhang08.github.io/2018/08/08/%E8%81%8A%E8%81%8A%E9%98%BF%E9%87%8C%E6%B7%98%E5%AE%9DSSO%E8%B7%A8%E5%9F%9F%E7%99%BB%E5%BD%95%E8%BF%87%E7%A8%8B/" target="_blank">&#x804A;&#x804A;&#x963F;&#x91CC;&#x6DD8;&#x5B9D;SSO&#x8DE8;&#x57DF;&#x767B;&#x5F55;&#x8FC7;&#x7A0B;</a></li>
 </ul>
-<h4 id="&#x4E09;&#x79CD;&#x5DE5;&#x5177;">&#x4E09;&#x79CD;&#x5DE5;&#x5177;</h4>
-<ol>
-<li>&#x539F;&#x751F; Online DDL&#xFF08;Mysql &gt;=5.6&#xFF09;</li>
-<li>pt-osc&#xFF08;pt-online-schema-change&#xFF09;<ul>
-<li>1.&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4E0E;&#x539F;&#x8868;&#x7ED3;&#x6784;&#x76F8;&#x540C;&#x7684;&#x7A7A;&#x8868;&#xFF0C;&#x8868;&#x540D;&#x662F; _new &#x540E;&#x7F00;&#xFF1B;</li>
-<li>2.&#x4FEE;&#x6539;&#x65B0;&#x8868;&#x7684;&#x8868;&#x7ED3;&#x6784;&#xFF1B;</li>
-<li>3.&#x5728;&#x539F;&#x8868;&#x4E0A;&#x52A0;&#x4E09;&#x4E2A;&#x89E6;&#x53D1;&#x5668;&#xFF1A;delete/update/insert&#xFF0C;&#x7528;&#x4E8E; copy &#x6570;&#x636E;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5C06;&#x539F;&#x8868;&#x4E2D;&#x8981;&#x6267;&#x884C;&#x7684;&#x8BED;&#x53E5;&#x5728;&#x65B0;&#x8868;&#x4E2D;&#x6267;&#x884C;&#xFF1B;</li>
-<li>4.&#x5C06;&#x539F;&#x8868;&#x6570;&#x636E;&#x4EE5;&#x6570;&#x636E;&#x5757;&#xFF08;chunk&#xFF09;&#x7684;&#x5F62;&#x5F0F; copy &#x5230;&#x65B0;&#x8868;&#xFF1B;</li>
-<li>5.rename &#x539F;&#x8868;&#x4E3A; old &#x8868;&#xFF0C;&#x5E76;&#x628A;&#x65B0;&#x8868; rename &#x4E3A;&#x539F;&#x8868;&#x540D;&#xFF0C;&#x7136;&#x540E;&#x5220;&#x9664;&#x65E7;&#x8868;&#xFF1B;</li>
-<li>6.&#x5220;&#x9664;&#x89E6;&#x53D1;&#x5668;&#x3002;</li>
-<li>&#x6B65;&#x9AA4;4&#x7684;&#x7EC6;&#x8282;&#x2014;&#x2014;&#x6570;&#x636E;&#x62F7;&#x8D1D;&#xFF1A;&#x5BF9;&#x6B63;&#x5728;&#x62F7;&#x8D1D;&#x7684;&#x6570;&#x636E;&#x52A0;&#x5171;&#x4EAB;&#x9501;&#xFF1B;&#x4F7F;&#x7528;INSERT LOW_PRIORITY IGNORE INTO&#x5FFD;&#x7565;&#x5DF2;&#x6709;&#x6570;&#x636E;&#xFF1B;chunk-size&#x548C;chunk-time&#x53C2;&#x6570;&#x9650;&#x5236;&#x5355;&#x6B21;&#x62F7;&#x8D1D;&#x7684;&#x65F6;&#x95F4;</li>
-<li>&#x6B65;&#x9AA4;4&#x7684;&#x7EC6;&#x8282;&#x2014;&#x2014;&#x4E09;&#x4E2A;&#x89E6;&#x53D1;&#x5668;&#xFF1A;<ul>
-<li>update&#x89E6;&#x53D1;&#x5668;&#xFF1A;delete ignore + replace into&#xFF0C;<a href="http://keithlan.github.io/2018/11/23/pt-online-schema-change_practise/" target="_blank">pt-online-schema-change &#x6700;&#x4F73;&#x5B9E;&#x8DF5;</a></li>
-<li>insert&#x89E6;&#x53D1;&#x5668;&#xFF1A;replace into&#xFF08;&#x4E3B;&#x952E;&#x4E00;&#x81F4;&#xFF09;</li>
-<li>delete&#x89E6;&#x53D1;&#x5668;&#xFF1A;delete ignore</li>
+<h4 id="&#x6DD8;&#x5B9D;&#x5929;&#x732B;&#x540C;&#x6B65;&#x767B;&#x5F55;&#x6D41;&#x7A0B;">&#x6DD8;&#x5B9D;&#x5929;&#x732B;&#x540C;&#x6B65;&#x767B;&#x5F55;&#x6D41;&#x7A0B;</h4>
+<ul>
+<li>&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x6DD8;&#x5B9D;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;CAS&#xFF08;login.taobao.com&#xFF09;&#x767B;&#x5F55;</li>
+<li>&#x767B;&#x5F55;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x5728;CAS&#x57DF;&#x540D;&#x4E0B;&#x79CD;&#x690D;cookie&#xFF0C;&#x8FD4;&#x56DE;&#x6DD8;&#x5B9D;&#x65F6;&#x5E26;&#x6709;&#x53C2;&#x6570;ST&#xFF08;Service Ticket&#xFF09;</li>
+<li>&#x6DD8;&#x5B9D;&#x5411;CAS&#x9A8C;&#x8BC1;ST&#x662F;&#x5426;&#x6709;&#x6548;&#xFF0C;&#x6709;&#x6548;&#x5219;&#x79CD;&#x690D;cookie</li>
+<li>&#x7528;&#x6237;&#x8BBF;&#x95EE;&#x5929;&#x732B;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;CAS&#xFF08;login.taobao.com&#xFF09;&#x767B;&#x5F55;</li>
+<li>CAS&#x57DF;&#x540D;&#x4E0B;&#x5DF2;&#x6709;&#x767B;&#x5F55;cookie&#xFF0C;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x5929;&#x732B;&#x5E76;&#x5E26;&#x6709;&#x53C2;&#x6570;ST</li>
+<li>&#x5929;&#x732B;&#x5411;CAS&#x9A8C;&#x8BC1;ST&#x662F;&#x5426;&#x6709;&#x6548;&#xFF0C;&#x6709;&#x6548;&#x5219;&#x79CD;&#x690D;cookie</li>
 </ul>
-</li>
+<h4 id="&#x6DD8;&#x5B9D;&#x5929;&#x732B;&#x540C;&#x6B65;&#x9000;&#x51FA;&#x6D41;&#x7A0B;">&#x6DD8;&#x5B9D;&#x5929;&#x732B;&#x540C;&#x6B65;&#x9000;&#x51FA;&#x6D41;&#x7A0B;</h4>
+<ul>
+<li>&#x8DF3;&#x8F6C;&#x5230;CAS&#xFF08;login.taobao.com&#xFF09;&#x9000;&#x51FA;&#xFF0C;&#x5E26;&#x4E0A;&#x7528;&#x6237;&#x767B;&#x5F55;&#x4EE4;&#x724C;&#x53C2;&#x6570;</li>
+<li>&#x9000;&#x51FA;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x5728;CAS&#x57DF;&#x540D;&#x4E0B;&#x6E05;&#x9664;cookie&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;</li>
+<li>CAS&#x53D6;&#x51FA;&#x6240;&#x6709;&#x7528;&#x6B64;&#x4EE4;&#x724C;&#x6CE8;&#x518C;&#x7684;&#x7CFB;&#x7EDF;&#x5730;&#x5740;&#xFF0C;&#x5411;&#x6240;&#x6709;&#x6CE8;&#x518C;&#x7CFB;&#x7EDF;&#x53D1;&#x8D77;&#x6CE8;&#x9500;&#x8BF7;&#x6C42;</li>
+<li>&#x5404;&#x6CE8;&#x518C;&#x7CFB;&#x7EDF;&#x5904;&#x7406;&#x6CE8;&#x9500;&#x8BF7;&#x6C42;</li>
 </ul>
-</li>
-<li>gh-ost<ul>
-<li>&#x521B;&#x5EFA;&#x5E7D;&#x7075;&#x8868;&#xFF1A;_xxx_gho&#xFF08;&#x548C;&#x539F;&#x8868;&#x7ED3;&#x6784;&#x4E00;&#x81F4;&#xFF09;&#xFF0C;_xxx_ghc&#xFF08;&#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x53D8;&#x66F4;&#x65E5;&#x5FD7;&#xFF09;</li>
-<li>&#x4FEE;&#x6539;&#x5E7D;&#x7075;&#x8868;&#x7684;&#x8868;&#x7ED3;&#x6784;</li>
-<li>&#x6A21;&#x62DF;&#x6210;&#x5907;&#x5E93;&#x8FDE;&#x63A5;&#x5230;&#x771F;&#x6B63;&#x7684;&#x4E3B;&#x5E93;&#x6216;&#x5907;&#x5E93;</li>
-<li>&#x5C06;&#x6570;&#x636E;&#x4ECE;&#x539F;&#x8868;&#x62F7;&#x8D1D;&#x5230;&#x5E7D;&#x7075;&#x8868;</li>
-<li>&#x5E94;&#x7528; binlog events &#x5230;&#x5E7D;&#x7075;&#x8868;</li>
-<li>&#x8FDB;&#x884C;&#x5207;&#x6362;&#xFF08;cut-over&#xFF09;</li>
-</ul>
-</li>
-</ol>
 
                                 
                                 </section>
@@ -442,10 +429,10 @@
 
             
                 
-                
-                <a href="13b.html" class="navigation navigation-next navigation-unique" aria-label="Next page: a.单点登录">
-                    <i class="fa fa-angle-right"></i>
+                <a href="13a.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: a.往一张数据量比较大的表中添加字段">
+                    <i class="fa fa-angle-left"></i>
                 </a>
+                
                 
             
         
@@ -454,7 +441,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"a.往一张数据量比较大的表中添加字段","level":"1.14.1","depth":2,"next":{"title":"a.单点登录","level":"1.14.2","depth":2,"path":"docs/13b.md","ref":"docs/13b.md","articles":[]},"previous":{"title":"13.关注点","level":"1.14","depth":1,"ref":"","articles":[{"title":"a.往一张数据量比较大的表中添加字段","level":"1.14.1","depth":2,"path":"docs/13a.md","ref":"docs/13a.md","articles":[]},{"title":"a.单点登录","level":"1.14.2","depth":2,"path":"docs/13b.md","ref":"docs/13b.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/13a.md","mtime":"2021-02-23T08:25:29.803Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-23T08:25:55.375Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"a.单点登录","level":"1.14.2","depth":2,"previous":{"title":"a.往一张数据量比较大的表中添加字段","level":"1.14.1","depth":2,"path":"docs/13a.md","ref":"docs/13a.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/13b.md","mtime":"2021-02-23T08:25:29.803Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-23T08:25:55.375Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
