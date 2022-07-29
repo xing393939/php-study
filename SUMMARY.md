@@ -2,7 +2,7 @@
 
 ### 目录
 
-* [1.PHP 面试点](docs/1.md)
+* [1.PHP 相关](docs/1.md)
 * [2.MySql 数据库](docs/2.md)
 * [3.Redis 缓存](docs/3.md)
 * [4.Linux 服务器](docs/4.md)
