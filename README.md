@@ -1,6 +1,6 @@
 ### PHP 学习
 
-#### 参考的面试资料：
+#### 参考资料
 1. [分享一下最近的面试题，都是大厂](https://learnku.com/articles/41140)
 1. [PHP面试问答](https://github.com/colinlet/PHP-Interview-QA)
 1. [PHP面试总结](https://github.com/chunlintang/interview)
