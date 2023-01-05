@@ -17,6 +17,7 @@
   * [a.IPC 相关](docs/12a.md)
   * [b.Linux init管理器](docs/12b.md)
   * [c.RabbitMQ 相关](docs/12c.md)
+  * [c.RocketMQ 相关](docs/12d.md)
 * 13.关注点
   * [a.往一张数据量比较大的表中添加字段](docs/13a.md)
   * [a.单点登录](docs/13b.md)
