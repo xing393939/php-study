@@ -69,10 +69,14 @@ class ConsumerTest
     public function run()
     {
         // 长轮询消费消息。
-        $messages = $this->consumer->consumeMessage(
-            3, // 一次最多消费3条（最多可设置为16条）。
-            3  // 长轮询时间3秒（最多可设置为30秒）。
-        );
+        $messages = [];
+        try {
+            $messages = $this->consumer->consumeMessage(
+                3, // 一次最多消费3条（最多可设置为16条）。
+                3     // 长轮询时间3秒（最多可设置为30秒）。
+            );
+        } catch (Exception $e) {
+        }
         print "consume finish, messages:\n";
 
         // 处理业务逻辑。
@@ -85,11 +89,14 @@ class ConsumerTest
                 $message->getConsumedTimes(), $message->getNextConsumeTime(), $message->getMessageKey()
             );
         }
+        if ($receiptHandles) {
+            //$this->consumer->ackMessage($receiptHandles);
+        }
     }
 }
 
-$instance = new ProducerTest();
-$instance->run();
+//$instance = new ProducerTest();
+//$instance->run();
 
 $instance = new ConsumerTest();
 $instance->run();
