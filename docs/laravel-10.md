@@ -1,4 +1,4 @@
-### 业务层的事件、队列、模型Observer、模型Notifications、模型Policy
+### 业务层的事件、队列、模型
 
 #### 事件
 1. [Laravel 事件系统用法总结](https://learnku.com/articles/13515)
