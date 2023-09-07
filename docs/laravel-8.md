@@ -16,9 +16,9 @@
   * 校验的时候校验header头X-XSRF-TOKEN
 
 #### CSRF的生成和校验
-* LearnKu网站是把CSRF存在cookie，每次ajax请求都会修改cookie
-* CSRF的生成：需要借助session(所以还需要一个cookie存session_id)，生成csrf存session，再把加密的csrf返回
-* CSRF的校验：先解密csrf，再和session中的csrf对比。校验完后重新生成csrf返回。
+* LearnKu网站是把CSRF存在cookie，每次ajax请求都会重新生成cookie
+* CSRF的生成：先生成csrf存session，再设置名为csrf的cookie
+* CSRF的校验：先解密csrf，再和session中的csrf对比。校验完后再设置名为csrf的cookie
 
 
 
